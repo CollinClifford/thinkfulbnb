@@ -100,7 +100,7 @@ form {
 /* spaces form to edges*/
 .input {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 form label {
@@ -136,7 +136,7 @@ footer p {
 
 /* -------  Media Query ------- */
 /* determines if the screen is larger than 480px */
-@media all and (min-width: 480px) {
+@media all and (min-width: 490px) {
   /* switches the display from block to flex */
   header,
   .form-class,
@@ -150,12 +150,18 @@ footer p {
   pushes nav to either side of screen.*/
   header {
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
   /* switches form to from column to row and spreads out*/
   .form-class {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   /* separates label and input */
